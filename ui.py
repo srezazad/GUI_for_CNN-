@@ -1,8 +1,6 @@
 from tkinter import *
 from data import Data
-
-THEME_COLOR = "#f77f00"
-FONT = ("Arial", 20, "normal")
+FONT = ("Arial", 12, "bold")
 
 class UI():
 
@@ -18,19 +16,19 @@ class UI():
 
 
         # Label
-        my_label = Label(text="Separability degree:", font=("Arial", 12, "bold"))
+        my_label = Label(text="Separability degree:", font=FONT)
         my_label.grid(column=0, row=1)
         my_label.config(padx=10, pady=10)
         self.input_sep = Entry(width=10)
         self.input_sep.grid(column=1, row=1)
 
-        my_label=Label(text="Balance ratio:", font=("Arial", 12, "bold"))
+        my_label=Label(text="Balance ratio:", font=FONT)
         my_label.grid(column=0, row=2)
         my_label.config(padx=10, pady=10)
         self.input_br = Entry(width=10)
         self.input_br.grid(column=1, row=2)
 
-        my_label = Label(text="Number of samples:", font=("Arial", 12, "bold"))
+        my_label = Label(text="Number of samples:", font=FONT)
         my_label.grid(column=0, row=3)
         my_label.config(padx=10, pady=10)
         self.input_ns = Entry(width=10)
@@ -67,33 +65,6 @@ class UI():
     def under_button_clicked(self):
         self.canvas.delete("all")
         self.canvas_image = self.canvas.create_image(250, 125, image=self.under_img)
-
-
-
-
-
-        # self.canvas_img = self.canvas.create_image(200, 200, width=380, text="TEXT")
-        # self.canvas.itemconfig(self.canvas_img, image, font=FONT)
-
-        #
-        # original_img.grid(column=0, row=0)
-        # Undersampled_img = PhotoImage(file="Undersampled.png")
-        # Undersampled_img.grid(column=0, row=0)
-
-
-
-
-        # # Button
-        # self.button = Button(text="Click Me")
-        # self.button.grid(column=1, row=1)
-        #
-        # self.new_button = Button(text="New Button")
-        # self.new_button.grid(column=2, row=0)
-        #
-        # # Entry
-        # input = Entry(width=10)
-        # print(input.get())
-        # input.grid(column=3, row=2)
 
 
 
